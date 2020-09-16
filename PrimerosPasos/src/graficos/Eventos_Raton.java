@@ -27,15 +27,24 @@ class MarcoRaton extends JFrame{
 		
 		EventosDeRaton EventoRaton = new EventosDeRaton();
 		
-		addMouseListener(EventoRaton);
+		addMouseMotionListener(EventoRaton);
 	}
 }
 
-class EventosDeRaton extends MouseAdapter{
+class EventosDeRaton implements MouseMotionListener{
 
-	public void mouseClicked(MouseEvent e) {
-		
-		System.out.println("Has hecho click");
+	@Override
+	public void mouseDragged(MouseEvent e) {
+		// TODO Auto-generated method stub
+		System.out.println("Estas arrastrando");
 	}
+
+	@Override
+	public void mouseMoved(MouseEvent e) {
+		// TODO Auto-generated method stub
+		System.out.println("Estas Moviendo el Raton");
+	}
+	
+	
 	
 }
